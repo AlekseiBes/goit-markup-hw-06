@@ -702,6 +702,7 @@ img {
 }
 
 .modal {
+  padding: 40px;
   width: 528px;
   height: 580px;
   background-color: var(--primari-buckground-color);
@@ -754,32 +755,91 @@ img {
   padding: 27px 0px;
 }
 
+/* Форма заповнення */
+
 .modal-text {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   color: var(--third-font-color);
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 .modal-form {
-}
-
-.modal-input-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-text-form {
-
 }
 
-.modal-dogovor {
+.title-form {
+  display: block;
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--contact-color);
+
+  margin-bottom: 4px;
+}
+
+.modal-icon-wrapper {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-75%);
+
+  display: block;
+  fill: var(--third-font-color);
+}
+
+.input-form {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  margin-bottom: 10px;
+  padding-left: 42px;
+}
+
+.input-form-user {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.modal-policy {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.28;
+  line-height: 1.71;
   color: var(--secondary-font-color);
 }
 
+.title-form-policy {
+  display: inline-block;
+  line-height: 1.71;
+  color: var(--contact-color);
+
+  margin-bottom: 30px;
+}
+
+.input-form-policy {
+}
+
 .molal-btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
