@@ -873,6 +873,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-font-color);
+  text-decoration: underline;
 }
 
 .title-form-policy {
