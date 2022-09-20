@@ -8,9 +8,8 @@
   --buckground-color-1: rgba(245, 244, 250, 1);
   --buckground-color-2: rgba(47, 48, 58, 1);
   --contact-color: rgba(117, 117, 117, 1);
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* 250ms cubic-bezier(0.4, 0, 0.2, 1) */
 
 body {
   background-color: var(--primari-buckground-color);
@@ -138,7 +137,7 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--animation);
 }
 
 .site-nav:hover,
@@ -174,7 +173,7 @@ img {
   font-weight: 500;
   line-height: 1.14;
   font-size: 16px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation);
 }
 
 .class-contact:hover,
@@ -251,18 +250,18 @@ img {
   line-height: 1.87;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 
   display: inline-block;
   width: 216px;
   height: 50px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animation);
 }
 
 .button-posluga:hover,
 .button-posluga:focus {
   background-color: rgba(24, 140, 232, 1);
   color: var(--primari-buckground-color);
-  cursor: pointer;
 }
 
 /* Заголовок переваг */
@@ -347,7 +346,7 @@ img {
 .site-footer {
   color: var(--font-color-footer);
   line-height: 1.7;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation);
 }
 
 .site-footer:hover,
@@ -357,7 +356,7 @@ img {
 
 .site-footer-2 {
   color: var(--primari-buckground-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation);
 }
 
 .site-footer-2:hover,
@@ -392,12 +391,12 @@ img {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--animation);
 }
 
 .client-fon svg {
   fill: rgba(175, 177, 184, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animation);
 }
 
 .client-fon:hover svg,
@@ -479,9 +478,7 @@ img {
   line-height: 1.62;
   border-radius: 4px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 
 .button-portfolio:focus,
@@ -514,7 +511,7 @@ img {
 
 .portfolio-link {
   display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--animation);
 }
 
 .portfolio-link:hover,
@@ -583,12 +580,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animation);
 }
 
 .team-fon svg {
   fill: rgba(175, 177, 184, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animation);
 }
 
 .team-fon:hover,
@@ -603,7 +600,7 @@ img {
 
 /* Футер соцмережі */
 
-.footer-connect {
+.footer-text {
   text-transform: uppercase;
   color: var(--primari-buckground-color);
   font-weight: 700;
@@ -629,7 +626,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animation);
 }
 
 .footer-fon svg {
@@ -650,18 +647,14 @@ img {
   margin-left: 70px;
 }
 
-/* Футер форма выдправки */
+/* Футер форма відправки */
 
 .footer-form {
   margin-left: auto;
 }
 
-.footer-title {
-  margin-bottom: 20px;
-  font-weight: 700;
-  line-height: 1.14;
-  color: var(--primari-buckground-color);
-  text-transform: uppercase;
+.footer-email-form {
+  display: flex;
 }
 
 .footer-email-form {
@@ -670,15 +663,27 @@ img {
 
 .footer-email-btn {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
   color: var(--primari-buckground-color);
   background-color: var(--secondary-font-color);
   border-radius: 4px;
   border: none;
+  width: 200px;
+  height: 50px;
+  align-self: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--animation);
+}
 
-  padding: 10px 28px;
+.footer-email-btn:hover,
+.footer-email-btn:focus {
+  background-color: rgba(24, 140, 232, 1);
 }
 
 .email-form-input {
@@ -721,7 +726,7 @@ img {
   height: 100%;
   width: 100%;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation);
 }
 
 .portfolio-link:hover .overlay,
@@ -739,8 +744,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--animation), visibility var(--animation);
 }
 
 .is-hidden {
@@ -752,7 +756,7 @@ img {
 .modal {
   padding: 40px;
   width: 528px;
-  height: 580px;
+  min-height: 580px;
   background-color: var(--primari-buckground-color);
   position: absolute;
   top: 50%;
@@ -769,11 +773,20 @@ img {
   justify-content: center;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0px;
+}
+
+.modal-close {
+  transition: fill var(--animation);
+}
+
+.modal-close:hover {
+  fill: var(--secondary-font-color);
 }
 
 .hobby li {
@@ -819,6 +832,10 @@ img {
   flex-direction: column;
 }
 
+.modal-text-form {
+  margin-bottom: 10px;
+}
+
 .title-form {
   display: block;
   font-size: 12px;
@@ -840,14 +857,16 @@ img {
 
   display: block;
   fill: var(--third-font-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animation);
 }
 
 .input-form:hover + .modal-icon {
   fill: var(--secondary-font-color);
 }
 
-/* .input-form:hover */
+.input-form:hover {
+  fill: var(--secondary-font-color);
+}
 
 .input-form {
   width: 100%;
@@ -855,9 +874,8 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  margin-bottom: 10px;
   padding-left: 42px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--animation);
 }
 
 .input-form:hover {
@@ -865,7 +883,56 @@ img {
   border-color: var(--secondary-font-color);
 }
 
+/* Коментар */
+
+.modal-form-user {
+  margin-bottom: 20px;
+}
+
+.input-form-user {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+
+  padding: 12px 16px;
+  transition: border-color var(--animation);
+}
+
+.input-form-user::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.input-form-user:hover {
+  outline: none;
+  border-color: var(--secondary-font-color);
+}
+
 /* Чекбокс */
+
+.checkbox-policy {
+  margin-bottom: 30px;
+}
+
+.input-form-policy {
+  position: absolute;
+  appearance: none;
+}
+
+.input-form-policy:checked + .checkbox-icon {
+  background-color: var(--secondary-font-color);
+}
+
+.input-form-policy:checked + .checkbox-icon .checkbox-choice {
+  display: block;
+}
+
+.input-form-policy:focus + .checkbox-icon {
+  box-shadow: 0 0 0 2px var(--secondary-font-color);
+}
 
 .modal-policy {
   font-family: 'Roboto', sans-serif;
@@ -880,8 +947,19 @@ img {
   display: inline-block;
   line-height: 1.71;
   color: var(--contact-color);
+}
 
-  margin-bottom: 30px;
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--third-font-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox-choice {
+  display: none;
+  fill: var(--primari-buckground-color);
 }
 
 /* Кнопка відправки форми */
@@ -902,65 +980,11 @@ img {
   align-self: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
-
-.molal-btn-submit:focus {
-  background-color: rgba(24, 140, 232, 1);
-}
-
-/* Коментар */
-
-.input-form-user {
-  width: 100%;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  resize: none;
-
-  padding: 12px 16px;
-  margin-bottom: 20px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-form-user::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.input-form-user:hover {
-  outline: none;
-  border-color: var(--secondary-font-color);
-}
-
-/* Чекбокс */
-
-.checkbox-icon {
-  width: 16px;
-  height: 15px;
-  border: 1px solid var(--third-font-color);
-  border-radius: 4px;
   cursor: pointer;
+  transition: background-color var(--animation);
 }
 
-.checkbox-choice {
-  display: none;
-  fill: var(--primari-buckground-color);
-}
-
-.input-form-policy:checked + .checkbox-icon {
-  background-color: var(--secondary-font-color);
-}
-
-.input-form-policy:checked + .checkbox-icon .checkbox-choice {
-  display: block;
-}
-
-.input-form-policy:focus + .checkbox-icon {
-  box-shadow: 0 0 0 2px var(--secondary-font-color);
-}
-
-.input-form-policy {
-  position: absolute;
-  appearance: none;
+.molal-btn-submit:hover,
+.molal-btn-submi:focus {
+  background-color: rgba(24, 140, 232, 1);
 }
